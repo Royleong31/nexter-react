@@ -1,0 +1,57 @@
+@import "base.scss";
+
+section.story-pictures {
+	grid-column: full-start / col-end 4;
+	background: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)),
+		url("../../img/back.jpg") center/cover;
+
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	align-items: center;
+
+	.story__img--1 {
+		grid-column: 2 / span 4;
+		grid-row: 2 / span 4;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.story__img--2 {
+		grid-column: 4 / span 7;
+		grid-row: 4 / span 3;
+		width: 115%;
+		object-fit: cover;
+		z-index: 1;
+	}
+}
+
+section.story-content {
+	grid-column: col-start 5 / full-end;
+	background-color: $color-grey-light-1;
+	padding: 6rem 8vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.story {
+		&__main {
+			margin-bottom: 2rem;
+		}
+
+		&__sub {
+			margin-bottom: 3rem;
+		}
+
+		&__text {
+			font-style: italic;
+			font-size: 1.5rem;
+			margin-bottom: 4rem;
+		}
+
+		&__btn {
+			align-self: flex-start;
+		}
+	}
+}
